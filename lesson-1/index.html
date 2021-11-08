@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="./js/main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <button class="button-1" id="1">Калькулятор дат</button>
+            <button class="button-2">Таймер</button>
+        </div>
+        <div class="main">
+            <div class="calc" hidden>
+                <h2>Калькулятор дат</h2>
+                <form id="calcDate">
+                    <label for="dateFrom">
+                        Первая дата:
+                        <input type="date" name="dateFrom" id="dateFrom">
+                    </label>
+                    <label for="dateTo">
+                        Вторая дата:
+                        <input type="date" name="dateTo" id="dateTo">
+                    </label>
+                    <button type="submit">Рассчитать промежуток</button>
+                </form>
+            </div>
+            <div class="timer">
+                <h2>Таймер со звуком</h2>
+                <form id='formTimer' action="#">
+                    <h3>Установить таймер</h3>
+                    <label for="newHours">
+                        Часы : <input type="number" id="newHours" min="0" max="24" name="hours" value="0">
+                    </label>
+                    <label for="newMinutes">
+                        Минуты : <input id="newMinutes" type="number" max="59" min="0" name="minute" value="0">
+                    </label>
+                    <label for="newSeconds">
+                        Секунды : <input type="number" id="seconds" max="59" min="0" name="second" value="0">
+                    </label>
+                    <button type="submit">Добавить время</button>
+                </form>
+                <div class="time-header"></div>
+                <div class="result">00:00:00:00</div>
+                <button class="start">Старт</button>
+                <button class="stop">Стоп</button>
+             
+            </div>
+            <div id="output"></div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
